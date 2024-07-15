@@ -7,21 +7,82 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: white;
+            background-color: black;
+            font-size: 10px;
+            text-align: left;
 
         }
+
         .tela-login {
-            background-color: black;
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 60px;
+            border-radius: 18px;
+            background-color: white;
+            color: black;
+            text-align: center;
         }
+        
+        input{
+            background-color: black;
+            padding: 15px;
+            border-radius: none;
+            outline: none;
+            color: white;
+            padding: 15px;
+            width: 87%;
+            margin: 10px auto;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px;
+            width: 98%;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.897);
+            cursor: pointer;
+
+         }
     </style>
 </head>
+
 <body>
-    <div class="tela-login">
-        <h1>Insira o nome do usuário para iniciar o jogo</h1>
-        <input type="text" placeholder="Nome">
+
+    <form class="tela-login"> 
+        
+        <h1>Nome do Usuário </h1> <br>
+        <input type="text" placeholder="Login" id="login">
+
         <br> <br>
-        <button>Enviar</button>
-    </div>
+
+        <input type="submit" onclick="logar(); return false" class="button">
+    
+    </form>
+
+
+    <script>
+        
+        function logar(){
+            var login = document.getElementById('login').value;
+
+            if(login){
+                alert('Sucesso')
+                
+            location.href = "tela-segunda.html"
+
+            } else{
+                alert('Usuário não encontrado')
+            }
+        }
+ 
+    </script>
 </body>
 </html>
