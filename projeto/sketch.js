@@ -72,10 +72,10 @@ function mostraRaquete(x,y) {
 }
 
 function movimentaMinhaRaquete( ) {
-  if(keyIsDown(UP_ARROW)) {
+  if(keyIsDown(UP_ARROW) && yRaquete >=0) {
     yRaquete -= 10;
   }
-  if(keyIsDown(DOWN_ARROW)) {
+  if(keyIsDown(DOWN_ARROW) && yRaquete <=300) {
     yRaquete += 10;
   }
 }
@@ -96,10 +96,10 @@ function verificaColisaoRaquete(x, y) {
 }
 
 function movimentaRaqueteOponente(){
-    if (keyIsDown(87)){
+    if (keyIsDown(87) && yRaqueteOponente >=0){
         yRaqueteOponente -= 10;
     }
-    if (keyIsDown(83)){
+    if (keyIsDown(83) && yRaqueteOponente <=300){
         yRaqueteOponente += 10;
     }
 }
