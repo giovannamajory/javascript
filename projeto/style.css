@@ -5,3 +5,31 @@ html, body {
   canvas {
     display: block;
   }
+
+  body {
+    background-color: black;
+    
+  }
+
+  .jogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 05px solid white;
+    
+  }
+
+  .seta {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    transform: translate(-15%, -20%);
+  }
+
+  .pause{
+    position: absolute;
+    top: 15%;
+    left: 48%;
+    transform: translate(-15%, -20%);
+  }
